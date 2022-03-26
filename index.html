@@ -21,17 +21,6 @@
             height: 100vh;
             width: 100vw;
         }
-        .saySomethin {
-            position: static;
-            z-index: auto;
-            
-            display: block;
-
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 2em;
-            word-wrap: break-word;
-            margin: 0 auto;
-        }
         .yourself {
             position: static;
             z-index: auto;
@@ -46,22 +35,9 @@
     </style>
 </head>
 <body>
-    <div class="saySomethin">
-        say somethin
-    </div>
     <div class="yourself">
 
     </div>
-    <script>
-        const saySomethin = document.querySelector('.saySomethin')
-        let interval = 1000
-        let timeout = 0
-        setInterval(() => {
-            ++timeout
-            if(timeout >= 3) saySomethin.innerHTML = "hey quick , what's 1 + 1 = ?"
-            if(timeout >= 6) location.replace('https://youtu.be/dQw4w9WgXcQ')
-        }, interval)
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
     <script>
         Webcam.set({
