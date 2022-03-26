@@ -29,12 +29,28 @@
 
             font-family: 'Courier New', Courier, monospace;
             font-size: 2em;
+            word-wrap: break-word;
+            margin: 0 auto;
+        }
+        .yourself {
+            position: static;
+            z-index: auto;
+
+            display: block;
+            height: 350px;
+            width: 350px;
+
+            border: solid 1px black;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <div class="saySomethin">
         say somethin
+    </div>
+    <div class="yourself">
+
     </div>
     <script>
         const saySomethin = document.querySelector('.saySomethin')
@@ -45,6 +61,16 @@
             if(timeout >= 3) saySomethin.innerHTML = "hey quick , what's 1 + 1 = ?"
             if(timeout >= 6) location.replace('https://youtu.be/dQw4w9WgXcQ')
         }, interval)
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script>
+        Webcam.set({
+            width: 350,
+            height: 350,
+            image_format: 'jpg',
+            jpeg_quality: 90
+        })
+        Webcam.attach('.yourself');
     </script>
 </body>
 </html>
