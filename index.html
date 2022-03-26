@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kazushi site</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lavender;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+            width: 100vw;
+        }
+        .saySomethin {
+            position: static;
+            z-index: auto;
+            
+            display: block;
+
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="saySomethin">
+        say somethin
+    </div>
+    <script>
+        const saySomethin = document.querySelector('.saySomethin')
+        let interval = 1000
+        let timeout = 0
+        setInterval(() => {
+            ++timeout
+            if(timeout >= 3) saySomethin.innerHTML = "hey quick , what's 1 + 1 = ?"
+            if(timeout >= 6) location.replace('https://youtu.be/dQw4w9WgXcQ')
+        }, interval)
+    </script>
+</body>
+</html>
